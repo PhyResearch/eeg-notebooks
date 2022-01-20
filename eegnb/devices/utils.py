@@ -14,6 +14,7 @@ EEG_CHANNELS = {
     "ganglion": ["fp1", "fp2", "tp7", "tp8"],
     "cyton": BoardShim.get_eeg_names(BoardIds.CYTON_BOARD.value),
     "cyton_daisy": BoardShim.get_eeg_names(BoardIds.CYTON_DAISY_BOARD.value),
+    "galea": BoardShim.get_eeg_names(BoardIds.GALEA_SERIAL_BOARD.value),
     "brainbit": BoardShim.get_eeg_names(BoardIds.BRAINBIT_BOARD.value),
     "unicorn": BoardShim.get_eeg_names(BoardIds.UNICORN_BOARD.value),
     "synthetic": BoardShim.get_eeg_names(BoardIds.SYNTHETIC_BOARD.value),
@@ -27,6 +28,7 @@ BRAINFLOW_CHANNELS = {
     "ganglion": [],
     "cyton": EEG_CHANNELS["cyton"] + ["accel_0", "accel_1", "accel_2"],
     "cyton_daisy": EEG_CHANNELS["cyton_daisy"] + ["accel_0", "accel_1", "accel_2"],
+    'galea': EEG_CHANNELS["galea"],
     "synthetic": EEG_CHANNELS["synthetic"],
 }
 
@@ -37,6 +39,7 @@ EEG_INDICES = {
     "ganglion": BoardShim.get_eeg_channels(BoardIds.GANGLION_BOARD.value),
     "cyton": BoardShim.get_eeg_channels(BoardIds.CYTON_BOARD.value),
     "cyton_daisy": BoardShim.get_eeg_channels(BoardIds.CYTON_DAISY_BOARD.value),
+    "galea": BoardShim.get_eeg_channels(BoardIds.GALEA_BOARD.value),
     "brainbit": BoardShim.get_eeg_channels(BoardIds.BRAINBIT_BOARD.value),
     "unicorn": BoardShim.get_eeg_channels(BoardIds.UNICORN_BOARD.value),
     "synthetic": BoardShim.get_eeg_channels(BoardIds.SYNTHETIC_BOARD.value),
@@ -53,6 +56,7 @@ SAMPLE_FREQS = {
     "ganglion": BoardShim.get_sampling_rate(BoardIds.GANGLION_BOARD.value),
     "cyton": BoardShim.get_sampling_rate(BoardIds.CYTON_BOARD.value),
     "cyton_daisy": BoardShim.get_sampling_rate(BoardIds.CYTON_DAISY_BOARD.value),
+    "galea": BoardShim.get_sampling_rate(BoardIds.GALEA_BOARD.value),
     "brainbit": BoardShim.get_sampling_rate(BoardIds.BRAINBIT_BOARD.value),
     "unicorn": BoardShim.get_sampling_rate(BoardIds.UNICORN_BOARD.value),
     "synthetic": BoardShim.get_sampling_rate(BoardIds.SYNTHETIC_BOARD.value),

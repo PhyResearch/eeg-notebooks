@@ -31,6 +31,7 @@ brainflow_devices = [
     "cyton_wifi",
     "cyton_daisy",
     "cyton_daisy_wifi",
+    "galea",
     "brainbit",
     "unicorn",
     "synthetic",
@@ -221,6 +222,12 @@ class EEG:
             if self.ip_addr is not None:
                 self.brainflow_params.ip_address = self.ip_addr
 
+        elif self.device_name == "galea":
+            self.brainflow_id = BoardIds.GALEA_BOARD.value
+            if self.ip_addr is not None:
+                self.brainflow_params.ip_address = self.ip_addr
+                self.brainflow_params.ip_port = 6677
+
         elif self.device_name == "brainbit":
             self.brainflow_id = BoardIds.BRAINBIT_BOARD.value
 
@@ -271,7 +278,7 @@ class EEG:
         self.stream_started = True
 
         # wait for signal to settle
-        if (self.device_name.find("cyton") != -1) or (self.device_name.find("ganglion") != -1):
+        if (self.device_name.find("cyton") != -1) or (self.device_name.find("ganglion") != -1) or (self.device_name.find("galea") != -1):
             # wait longer for openbci cyton / ganglion
             sleep(10)
         else:
