@@ -18,7 +18,7 @@ from eegnb.devices.eeg import EEG
 from eegnb.experiments.visual_ssvep import ssvep
 
 # Define some variables
-board_name = "muse"
+board_name = "cyton"
 experiment = "visual_ssvep"
 subject_id = 0
 session_nb = 0

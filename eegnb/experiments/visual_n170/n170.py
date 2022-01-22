@@ -41,7 +41,7 @@ def present(duration=120, eeg: EEG=None, save_fn=None):
     stim = [houses, faces]
 
     # Show the instructions screen
-    show_instructions(duration)
+    show_instructions(170)
 
     if eeg:
         if save_fn is None:  # If no save_fn passed, generate a new unnamed save file
